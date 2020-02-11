@@ -1,0 +1,47 @@
+{% extends base %}
+
+<!-- goes in body -->
+{% block postamble %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+{% endblock %}
+
+<!-- goes in body -->
+{% block contents %}
+
+<div class="bg-dark text-white">
+
+    <h1 class="text-center">
+        Sirene Interactive Data Exploration
+    </h1>
+
+    <p class="text-center">
+        Using : Apache Hadoop, Apache Spark, Pandas, Altair, Panel
+    </p>
+
+    <p class="text-center">
+        This visualization is built from 20+ millions records of dozens of variables. <br>
+        Sirene Database is updated every day and saved to HDFS. <br>
+        A Spark job computes new values for each targeted variable. <br>
+        Dashboards are served through AWS. <br>
+    </p>
+
+    <br>
+
+    <div class="container">
+        <div class="row w-100 p-3">
+            <div class="col-sm">
+                {{ embed(roots.type_dashboard) }}
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row w-100 p-3">
+            <div class="col-sm">
+                {{ embed(roots.activity_dashboard) }}
+            </div>
+        </div>
+    </div>
+
+<div>
+{% endblock %}
