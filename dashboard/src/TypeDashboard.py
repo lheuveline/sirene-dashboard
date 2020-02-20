@@ -10,10 +10,10 @@ from jinja2 import Environment, FileSystemLoader
 
 class TypeDashboard:
 
-    def __init__(self):
+    def __init__(self, **kwargs):
 
-        self.data_path = "../data/category_by_dpt"
-        self.code_categoriejuridique_path = '../data/code_categoriejuridique.json'
+        self.data_path = kwargs['data_path']
+        self.code_categoriejuridique_path = kwargs["type_code_labels_path"]
     
     def run(self):
         
@@ -100,7 +100,8 @@ class TypeDashboard:
         title = "### Catégories juridiques selon le département"
         dashboard = pn.Row(
             pn.Column(title, ticker), 
-            get_plot,
-            width_policy='max'
+            pn.Column(get_plot, margin=(0, 260, 0, 0)),
+            width = 1000,
+            height = 400
         )
         return dashboard

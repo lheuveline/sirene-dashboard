@@ -3,12 +3,17 @@
 <!-- goes in body -->
 {% block postamble %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        /* html, body {
+            height: 100%;
+        } */
+    </style>
 {% endblock %}
 
 <!-- goes in body -->
 {% block contents %}
 
-<div class="bg-dark text-white">
+<div class="container-fluid bg-dark text-white">
 
     <h1 class="text-center">
         Sirene Interactive Data Exploration
@@ -27,18 +32,26 @@
 
     <br>
 
-    <div class="container">
-        <div class="row w-100 p-3">
-            <div class="col-sm">
+    <div class="container-fluid">
+        <div class="row flex justify-content-center">
+            <div class="col-sm-auto">
                 {{ embed(roots.type_dashboard) }}
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row w-100 p-3">
-            <div class="col-sm">
+    <div class="container-fluid">
+        <div class="row flex justify-content-center">
+            <div class="col-sm-auto">
                 {{ embed(roots.activity_dashboard) }}
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row flex justify-content-center">
+            <div class="col-sm-auto">
+                {{ embed(roots.activity_geographic_dashboard) }}
             </div>
         </div>
     </div>

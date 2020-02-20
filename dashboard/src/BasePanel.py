@@ -10,7 +10,6 @@ class BasePanel:
     def __init__(self, dashboard_dict, template = "./template.html"):
         self.dashboard_dict = dashboard_dict
         self.jinja2_fs_loader_path = '/'.join(template.split('/')[:-1])
-        print(self.jinja2_fs_loader_path)
         self.template = template
 
     def load_template(self):
