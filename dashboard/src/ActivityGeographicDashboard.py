@@ -4,7 +4,7 @@ import pandas as pd
 
 import altair as alt
 import panel as pn
-from vega_datasets import data
+#from vega_datasets import data
 
 from jinja2 import Environment, FileSystemLoader
 
