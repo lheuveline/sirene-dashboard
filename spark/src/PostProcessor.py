@@ -11,8 +11,6 @@ class ActivityPostProcessor:
 
         self._target_columns = ['activitePrincipaleUniteLegale']
 
-        #self.folders_path = 'activitePrincipaleUniteLegale_by_codes_postaux'
-        #self.file_path_list = self.get_data_path_list('../data/{}'.format(folders_path))
         self.category_labels_path = '../data/naf_2008.json'
         self.categories_labels = self.get_categories_labels(self.category_labels_path)
         
@@ -93,6 +91,6 @@ class ActivityPostProcessor:
         )
         return df
         
-    def save_dataframe(self, df):
+    def save_dataframe(self, df, folders_path):
         df.to_csv('../data/clean_{}/dataset.csv'.format(folders_path))
         

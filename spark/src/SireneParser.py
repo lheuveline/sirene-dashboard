@@ -24,8 +24,6 @@ class SireneParser:
         if isinstance(on, str):
             col_names = [prefix + x if x != on else x for x in df1.schema.names]
             df1 = df1.toDF(*col_names)
-        # Parsing codeCommune to dptCode on origin dataframe
-        #df1 = self.format_dpt_code(df1, "etab_codeCommuneEtablissement")
         return df1.join(df2, on=on)
 
     def format_dpt_code(self, df, col):
