@@ -34,8 +34,6 @@ class ActivityGeographicDashboard:
         self.df = self.df[self.df['Activité'].isin(list(counts.index))]
 
     def check_dataframe_shape(self, multiplier = 10):
-        # Check dataframe shape before disabling MaxRowsError
-        #assert self.df.shape[0] < 5000 * multiplier # 5000 is the default threshold for Altair
         # Disable MaxRowsError.
         alt.data_transformers.disable_max_rows()
 

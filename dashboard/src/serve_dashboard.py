@@ -16,7 +16,6 @@ activity_dashboard_params = {
 }
 
 activity_geographic_dashboard_params = {
-    #"data_path" : "../data/clean_activitePrincipaleUniteLegale_by_codes_postaux/dataset.csv",
     "data_path" : "../data/activity_by_postal_codes.csv",
     "activity_code_labels_path" : '../data/naf_2008.json',
     "postal_codes_lat_long_labels_path" : "../data/EUCircos_Regions_departements_circonscriptions_communes_gps.csv"
