@@ -8,8 +8,8 @@ import panel as pn
 
 from jinja2 import Environment, FileSystemLoader
 
-from pyspark import SparkContext
-from pyspark.sql import SparkSession
+#from pyspark import SparkContext
+#from pyspark.sql import SparkSession
 
 class ActivityGeographicDashboard:
 
