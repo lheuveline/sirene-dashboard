@@ -13,3 +13,9 @@
             - "activity_category_postal_codes" : smaller subset adding coordinates when found in INSEE geolocation file
         * 2.2 : Extract counts for interactive exploration to dashboard data folder.
     * 3 - Panel is used to display extracted data interatively.
+
+* Updates :
+
+    * To update on regular basis :
+        * Set cron jobs to run hdfs/load_data.sh, spark/src/merge_datasets.py and spark/src/extract_counts.py
+        * Run Panel in background. For Web deployment, place under Nginx or Apache proxy.
