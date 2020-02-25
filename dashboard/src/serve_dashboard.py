@@ -6,12 +6,12 @@ from ActivityGeographicDashboard import ActivityGeographicDashboard
 TEMPLATE_PATH = "template.html" # problems when file in diffrent location (jinja2.FileSystemLoader)
 
 type_dashboard_params = {
-    "data_path" : "../data/category_by_dpt",
+    "data_path" : "../data/categorieJuridiqueUniteLegale_by_dpt",
     "type_code_labels_path" : '../data/code_categoriejuridique.json'
 }
 
 activity_dashboard_params = {
-    "data_path" : "../data/activity_by_dpt",
+    "data_path" : "../data/activitePrincipaleUniteLegale_by_dpt",
     "activity_code_labels_path" : '../data/naf_2008.json'
 }
 
