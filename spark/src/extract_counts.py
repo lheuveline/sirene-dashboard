@@ -22,7 +22,7 @@ def groupby_postal_code(worker):
 
 def main():
     worker = Worker()
-    #extract_counts_by_dpt(worker)
+    extract_counts_by_dpt(worker)
     groupby_postal_code(worker)
 
 

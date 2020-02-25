@@ -96,8 +96,9 @@ class Worker:
                 grouped_data_df = df.filter(df[by] == row[by])
                 if agg_function == "count":
                     counts = self.parser.count_values(grouped_data_df, col)
+                    counts = counts.withColumn(by, lit(row[by]))
                     if additional_data is not None:
-                        counts = counts.withColumn('codes_postaux', lit(row[by]))
+                        #counts = counts.withColumn('codes_postaux', lit(row[by]))
                         counts = self.parser.merge(counts, additional_data, by)
                     # If enabled, pass df to post_processor instead of direct write
                     if post_processor is not None:
