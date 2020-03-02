@@ -1,3 +1,6 @@
 spark/notebooks
+spark/src/__pycache__
+spark/src/*.pyc
 dashboard/notebooks
+dashboard/src/__pycache__
 venv
